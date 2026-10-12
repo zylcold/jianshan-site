@@ -22,11 +22,9 @@ cd site && python3 -m http.server 8080
 
 ## 部署
 
-仓库为私有；站点通过 Cloudflare Pages 发布（静态文件直接上传，不接入 Git 集成）：
+仓库公开；推送到 `main` 且改动位于 `site/**` 时，由 GitHub Actions（`.github/workflows/pages.yml`）自动发布到 GitHub Pages。
 
-```sh
-cd site && npx wrangler pages deploy . --project-name <项目名> --branch main
-```
+站点地址：https://zylcold.github.io/jianshan-site/
 
 ## 联系方式
 
