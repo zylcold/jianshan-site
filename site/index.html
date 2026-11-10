@@ -1,37 +1,175 @@
 <!DOCTYPE html>
 <html lang="zh-Hans">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>见山</title>
-  <meta name="theme-color" content="#FBF8F1">
-  <meta name="robots" content="noindex">
-  <link rel="stylesheet" href="assets/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>见山 · 听风看月，在诗中冥想</title>
+  <meta name="description" content="见山是一款古诗词冥想 App。循着诗句听风看月，跟随日月呼吸，把喜欢的景色收入画廊。">
+  <meta name="theme-color" content="#f2ecdd">
+  <link rel="canonical" href="https://zylcold.github.io/jianshan-site/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="见山 · 听风看月，在诗中冥想">
+  <meta property="og:description" content="循着诗句听风看月，把片刻清静收入画廊。">
+  <meta property="og:image" content="https://zylcold.github.io/jianshan-site/assets/media/share.jpg">
+  <link rel="icon" href="assets/media/icon.png" type="image/png">
+  <link rel="stylesheet" href="assets/home.css">
+  <script src="assets/home.js" defer></script>
 </head>
 <body>
-  <nav>
-    <div class="nav-inner">
-      <span class="brand">见 山</span>
+  <a class="skip" href="#main">跳到正文</a>
+  <header class="masthead">
+    <nav class="shell navigation" aria-label="主导航">
+      <a href="./" class="wordmark" aria-label="见山首页">
+        <img src="assets/media/icon.png" width="36" height="36" alt="">
+        <span>见山<small>JIANSHAN</small></span>
+      </a>
       <div class="nav-links">
-        <a href="privacy.html">隐私政策</a>
-        <a href="terms.html">用户协议</a>
+        <a href="#scenes">诗境</a>
+        <a href="#breath">呼吸</a>
+        <a href="#gallery">画廊</a>
       </div>
-    </div>
-  </nav>
+      <a class="nav-download" href="https://apps.apple.com/cn/app/id6820524973">App Store <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
 
-  <main>
-    <section class="placeholder">
-      <h1>见 山</h1>
-      <p style="color: var(--ink-faint); font-size: 14px;">主页建设中。</p>
-      <div class="actions">
-        <a class="btn" href="privacy.html">隐私政策</a>
-        <a class="btn" href="terms.html">用户协议</a>
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="landscape" aria-hidden="true">
+        <div class="hero-sun" data-depth=".09"></div>
+        <img class="ridge ridge-far" data-depth=".12" src="assets/media/distant-ridges.webp" alt="" fetchpriority="high">
+        <img class="ridge ridge-left" data-depth=".21" src="assets/media/mountain-main.webp" alt="">
+        <img class="ridge ridge-right" data-depth=".28" src="assets/media/mountain-layered.webp" alt="" fetchpriority="high">
+        <div class="water"></div>
+        <div class="shore" data-depth=".43">
+          <img class="island" src="assets/media/island.webp" alt="">
+          <img class="pavilion" src="assets/media/pavilion.webp" alt="">
+          <img class="pines" src="assets/media/pines.webp" alt="">
+        </div>
+        <div class="paper-grain"></div>
+      </div>
+      <div class="shell hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> 古诗词 · 沉浸冥想</p>
+          <h1 id="hero-title">见山</h1>
+          <p class="hero-line">听风看月，在诗中冥想。</p>
+          <p class="hero-detail">循着一句诗走进山水。听自然声，随日月呼吸，<br class="wide-only">留几分钟给自己。</p>
+          <div class="hero-actions">
+            <a class="button primary" href="https://apps.apple.com/cn/app/id6820524973">在 App Store 下载 <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="#scenes">先观一境 <span aria-hidden="true">↓</span></a>
+          </div>
+        </div>
+        <p class="hero-inscription" aria-hidden="true">山中有清音</p>
+        <div class="hero-foot">
+          <span><i></i> 卷首 · 青绿山水</span>
+          <a href="#scenes">向下展卷 <span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="scenes shell" id="scenes" aria-labelledby="scene-title">
+      <div class="scene-copy">
+        <p class="eyebrow"><span></span> 卷一 / 诗境</p>
+        <h2 id="scene-title">从一句诗入境</h2>
+        <p class="section-lead">按此刻心绪选一首诗。诗句随山水渐次展开，风雨与流水在画外相伴。</p>
+        <div class="scene-select" role="group" aria-label="选择诗境" hidden>
+          <button type="button" aria-pressed="true" aria-controls="autumn"><small>01</small>山居秋暝</button>
+          <button type="button" aria-pressed="false" aria-controls="rain"><small>02</small>定风波</button>
+          <button type="button" aria-pressed="false" aria-controls="snow"><small>03</small>江雪</button>
+        </div>
+        <article class="poem" id="autumn" data-scene data-audio="stream" data-sound="溪流">
+          <p class="poem-author">唐 · 王维</p>
+          <blockquote>空山新雨后，<br>天气晚来秋。</blockquote>
+          <p class="poem-note">空山新雨，明月清泉。<span>· 淡彩</span></p>
+        </article>
+        <article class="poem" id="rain" data-scene data-audio="rain" data-sound="细雨" hidden>
+          <p class="poem-author">宋 · 苏轼</p>
+          <blockquote>莫听穿林打叶声，<br>何妨吟啸且徐行。</blockquote>
+          <p class="poem-note">穿林细雨，缓步徐行。<span>· 夜泊</span></p>
+        </article>
+        <article class="poem" id="snow" data-scene data-audio="wind" data-sound="山风" hidden>
+          <p class="poem-author">唐 · 柳宗元</p>
+          <blockquote>孤舟蓑笠翁，<br>独钓寒江雪。</blockquote>
+          <p class="poem-note">雪落寒江，孤舟独钓。<span>· 水墨</span></p>
+        </article>
+        <button class="button audio-button" type="button" aria-pressed="false" hidden><span class="sound-mark" aria-hidden="true"></span><span id="sound-label">试听溪流</span></button>
+        <p class="audio-status" role="status"></p>
+        <audio id="nature-audio" preload="none" loop></audio>
+      </div>
+
+      <figure class="scene-figure">
+        <div class="scene-mount" data-view="autumn">
+          <div class="mount-inner">
+            <img src="assets/media/autumn.webp" data-art="autumn" width="393" height="852" alt="见山《山居秋暝》淡彩诗境" loading="lazy" decoding="async">
+            <img src="assets/media/rain.webp" data-art="rain" width="393" height="852" alt="见山《定风波》夜泊诗境" loading="lazy" decoding="async" hidden>
+            <img src="assets/media/snow.webp" data-art="snow" width="393" height="852" alt="见山《江雪》水墨诗境" loading="lazy" decoding="async" hidden>
+          </div>
+          <div class="mount-title" aria-hidden="true"><span>見山詩境</span><i>山</i></div>
+        </div>
+        <figcaption><span>见山 App 实际渲染</span><span id="scene-number">01 / 03</span></figcaption>
+      </figure>
+    </section>
+
+    <section class="breath" id="breath" aria-labelledby="breath-title">
+      <div class="breath-terrain" aria-hidden="true"></div>
+      <div class="shell breath-inner">
+        <div class="breath-copy">
+          <p class="eyebrow"><span></span> 卷二 / 呼吸</p>
+          <h2 id="breath-title">与月同息</h2>
+          <p class="section-lead">在 App 中，日月的微光随呼吸起落。你也可以在这里跟随一轮月光，慢慢吸气，再缓缓呼出。</p>
+          <p class="breath-timing">吸气 6 秒 <span>·</span> 呼气 10 秒</p>
+          <button class="button breath-button" type="button" hidden>开始呼吸</button>
+        </div>
+        <div class="breath-focus">
+          <div class="moon-space" aria-hidden="true"><div class="moon"></div></div>
+          <p id="breath-phase" role="status" aria-atomic="true">静候一息</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery shell" id="gallery" aria-labelledby="gallery-title">
+      <div class="scrolls" aria-label="三幅使用见山装裱素材展示的诗境画卷">
+        <figure class="scroll scroll-snow">
+          <div class="scroll-sheet"><img src="assets/media/snow.webp" width="393" height="852" alt="水墨画卷《江雪》" loading="lazy"></div>
+        </figure>
+        <figure class="scroll scroll-autumn">
+          <div class="scroll-sheet"><img src="assets/media/autumn.webp" width="393" height="852" alt="淡彩画卷《山居秋暝》" loading="lazy"></div>
+        </figure>
+        <figure class="scroll scroll-rain">
+          <div class="scroll-sheet"><img src="assets/media/rain.webp" width="393" height="852" alt="夜泊画卷《定风波》" loading="lazy"></div>
+        </figure>
+      </div>
+      <div class="gallery-copy">
+        <p class="eyebrow"><span></span> 卷三 / 画廊</p>
+        <h2 id="gallery-title">把此刻收入画廊</h2>
+        <p class="section-lead">在喜欢的景色前停一停。保存画面、挑一款装裱，或添一笔题记。下次展卷，再看那天的山水。</p>
+      </div>
+    </section>
+
+    <section class="closing" aria-labelledby="closing-title">
+      <div class="shell closing-inner">
+        <img src="assets/media/icon.png" width="72" height="72" alt="" loading="lazy">
+        <div>
+          <p class="eyebrow"><span></span> 见山 · JIANSHAN</p>
+          <h2 id="closing-title">留几分钟，选诗入境</h2>
+          <p>iPhone 需 iOS 26 或更新版本</p>
+        </div>
+        <a class="button primary" href="https://apps.apple.com/cn/app/id6820524973">在 App Store 下载 <span aria-hidden="true">↗</span></a>
       </div>
     </section>
   </main>
 
-  <footer>
-    <span>© 2026</span>
+  <footer class="shell footer">
+    <div class="footer-row">
+      <span>© 2026 见山</span>
+      <div><a href="privacy.html">隐私政策</a><a href="terms.html">用户协议</a><a href="mailto:yunlongzhu0315@gmail.com">联系开发者</a></div>
+    </div>
+    <details class="credits">
+      <summary>自然声素材署名</summary>
+      <p>溪流 <a href="https://opengameart.org/content/stream-sounds">Stream Sounds</a> / kurt，<a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>。</p>
+      <p>细雨 <a href="https://opengameart.org/content/rain-loopable">Rain (loopable)</a> / Ylmir，<a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a>。</p>
+      <p>山风 <a href="https://freesound.org/people/florianreichelt/sounds/459977/">Soft Wind</a> / florianreichelt，<a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a>。</p>
+      <p>试听沿用 App 的单声道 AAC 版本，经剪辑、响度调整及循环衔接处理。</p>
+    </details>
   </footer>
 </body>
 </html>
