@@ -183,14 +183,7 @@ section[id] { scroll-margin-top: 84px; }
 .scene-mount[data-view="rain"] { background-color: #babdb7; }
 .scene-mount[data-view="snow"] { background-color: #d5d5ce; }
 .scene-mount::before { content: ""; position: absolute; inset: 4%; border: 1px solid #26382d38; pointer-events: none; }
-.mount-inner {
-  width: 41%;
-  padding: 5px;
-  background: #f8f0da;
-  border: 1px solid #1b352f52;
-  box-shadow: 0 8px 25px #26372d31;
-}
-.mount-inner img { width: 100%; height: auto; }
+.scene-mount .scroll { width: 66%; }
 .mount-title { position: absolute; top: 10%; right: 8%; display: grid; justify-items: center; gap: 9px; color: #203a2c; }
 .mount-title span { writing-mode: vertical-rl; font: 700 clamp(.7rem, 1.15vw, 1rem)/1.3 var(--serif); letter-spacing: .16em; }
 .mount-title i { background: #8e473b; color: #fff2d8; padding: 1px 3px; font: 700 .64rem/1.4 var(--serif); }
@@ -259,13 +252,14 @@ section[id] { scroll-margin-top: 84px; }
 }
 .scroll {
   position: relative;
-  width: 31%;
   aspect-ratio: 520 / 780;
   background: url("media/scroll.webp?v=ink") center / 100% 100% no-repeat;
 }
+.scrolls .scroll { width: 31%; }
 .scroll-snow { margin-top: 7%; }
 .scroll-rain { margin-top: 11%; }
-.scroll-sheet { position: absolute; inset: 24% 21% 17%; overflow: hidden; }
+/* The opening in scroll.webp spans x 142–376 and y 184–652 at 520 × 780. */
+.scroll-sheet { position: absolute; inset: 24% 28% 16.5%; overflow: hidden; }
 .scroll-sheet img { width: 100%; height: 100%; object-fit: cover; object-position: center 29%; }
 .closing { background: #e8e5dc; border-block: 1px solid var(--rule); }
 .closing-inner { display: flex; flex-wrap: wrap; align-items: center; gap: 22px; padding-block: 40px; }
